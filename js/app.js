@@ -58,7 +58,7 @@ var seaTac = { // SeaTac Location
 
 seaTac.showCookieData();
 
-var seattleCenter = {
+var seattleCenter = { // Seattle Center Location
   minCust: 11,
   maxCust: 38,
   avgCookiesPerSale: 3.7,
@@ -66,9 +66,21 @@ var seattleCenter = {
     return Math.ceil(Math.random() * ((this.maxCust) -(this.minCust)) + this.minCust); 
   },
   cookiesPerHr: function() {
-    return this.avgCookiesPerSale * this.custPerHr();
+    return Math.round(this.avgCookiesPerSale * this.custPerHr());
+  },
+  showCookieData: function() {
+    var seattleCenterDataList = document.getElementById('center_totals');
+
+    for (var i = 0; i < operationTime.length; i++) {
+      var hourEl = document.createElement('li');
+          hourEl.textContent = operationTime[i] + ': ' + this.cookiesPerHr();
+
+          seattleCenterDataList.appendChild(hourEl);
+    }
   }
 }
+
+seattleCenter.showCookieData(); // Invoking Function to build list
 
 var capitolHill = {
   minCust: 20,

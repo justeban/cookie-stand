@@ -106,7 +106,7 @@ var capitolHill = { // Capitol Hill Location
 
 capitolHill.showCookieData();
 
-var alki = {
+var alki = { // Alki location
   minCust: 2,
   maxCust: 16,
   avgCookiesPerSale: 4.6,
@@ -114,7 +114,20 @@ var alki = {
     return Math.ceil(Math.random() * ((this.maxCust) - (this.minCust)) + this.minCust);
   },
   cookiesPerHour: function () {
-    return this.avgCookiesPerSale * this.custPerHr();
+    return Math.round(this.avgCookiesPerSale * this.custPerHr());
+  },
+  showCookieData: function() {
+    var alkiDataList = document.getElementById('alki_totals');
+    
+    for (var i = 0; i < operationTime.length; i++) {
+      var hourEl = document.createElement('li');
+          hourEl.textContent = operationTime[i] + ': ' + this.cookiesPerHour();
+
+          alkiDataList.appendChild(hourEl);
+    }
   }
 }
+
+alki.showCookieData();
+
 

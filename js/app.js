@@ -80,9 +80,9 @@ var seattleCenter = { // Seattle Center Location
   }
 }
 
-seattleCenter.showCookieData(); // Invoking Function to build list
+seattleCenter.showCookieData();
 
-var capitolHill = {
+var capitolHill = { // Capitol Hill Location
   minCust: 20,
   maxCust: 38,
   avgCookiesPerSale: 2.3,
@@ -90,9 +90,21 @@ var capitolHill = {
     return Math.ceil(Math.random() * ((this.maxCust) - (this.minCust)) + this.minCust);
   },
   cookiesPerHour: function () {
-    return this.avgCookiesPerSale * this.custPerHr();
+    return Math.round(this.avgCookiesPerSale * this.custPerHr());
+  },
+  showCookieData: function() {
+    var capitolHillDataList = document.getElementById('capitolhill_totals');
+
+    for (var i = 0; i < operationTime.length; i++) {
+      var hourEl = document.createElement('li');
+          hourEl.textContent = operationTime[i] + ': ' + this.cookiesPerHour();
+
+          capitolHillDataList.appendChild(hourEl);
+    }
   }
 }
+
+capitolHill.showCookieData();
 
 var alki = {
   minCust: 2,

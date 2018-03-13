@@ -34,7 +34,6 @@ var operationTime = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', 
 //   }
 // };
 
-var coffeShops = [];
 var cookiesTable = document.getElementById('cookies-sold');
 
 function CookieShop(location, minCust, maxCust, cookiesPerSale) {
@@ -42,6 +41,7 @@ function CookieShop(location, minCust, maxCust, cookiesPerSale) {
   this.minCust = minCust;
   this.maxCust = maxCust;
   this.cookiesPerSale = cookiesPerSale;
+  this.cookiesSoldPerHr = [];
 }
 
 CookieShop.prototype.custPerHr = function () {
@@ -69,6 +69,8 @@ CookieShop.prototype.render = function() {
     tdElement = document.createElement('td');
     tdElement.textContent = cookiesSold;
     trElement.appendChild(tdElement);
+
+    this.cookiesSoldPerHr.push(cookiesSold);
 
     totalCookiesSold += cookiesSold;
 

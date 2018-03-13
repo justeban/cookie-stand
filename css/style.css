@@ -3,6 +3,7 @@
   box-sizing: border-box;
 }
 body {
+  background: skyblue;
   font-size: 16px;
 }
 h1 {
@@ -28,6 +29,10 @@ ul {
 li {
   list-style-type: disc;
   margin-left: 18px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+header {
+  text-align:center;
 }
 section {
   display: block;
@@ -36,8 +41,24 @@ section {
   width: 50vw;
   position: relative;
 }
-section.left_side {
-  background: skyblue;
+.right_side {
+  text-align: center;
+  background: salmon;
+}
+.right_side ul {
+  padding:0;
+}
+.right_side li {
+  color: white;
+  margin: 0;
+  list-style-type: none;
+}
+.right_side h2 {
+  margin-bottom: 5px;
+}
+.cookie_data {
+  width: 100vw;
+  text-align: center;
 }
 #Logo {
   display: block;
@@ -56,20 +77,18 @@ section.left_side {
   color: white;
   stroke: solid 1px black;
 }
-.right_side {
-  text-align: center;
+
+div { 
+  margin: 25px 25px;
+  padding: 10px;
 }
-.right_side ul {
-  padding:0;
+div.data-list {
+  float:left;
+  background:#1590c9;
 }
-.right_side li {
-  margin: 0;
-  list-style-type: none;
-}
-.right_side h2 {
-  margin-bottom: 5px;
-}
-.locations {
-    margin: 100px 3px 3px 3px;
-    padding: 10px;
+.data-list li {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  border: solid 1px white;
+  padding: 5px;
 }

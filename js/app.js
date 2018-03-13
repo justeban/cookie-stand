@@ -82,6 +82,8 @@ var seattleCenter = { // Seattle Center Location
   minCust: 11,
   maxCust: 38,
   avgCookiesPerSale: 3.7,
+  totalCookies: 0,
+  cookiesSoldArray: [],
   custPerHr: function() {
     return Math.ceil(Math.random() * ((this.maxCust) -(this.minCust)) + this.minCust); 
   },
@@ -89,14 +91,22 @@ var seattleCenter = { // Seattle Center Location
     return Math.round(this.avgCookiesPerSale * this.custPerHr());
   },
   showCookieData: function() {
-    var seattleCenterDataList = document.getElementById('center_totals');
 
     for (var i = 0; i < operationTime.length; i++) {
-      var hourEl = document.createElement('li');
-          hourEl.textContent = operationTime[i] + ': ' + this.cookiesPerHr() + ' cookies';
+      
+      this.cookiesSoldArray[i] = this.cookiesPerHr();
 
-          seattleCenterDataList.appendChild(hourEl);
+      var hourEl = document.createElement('li');
+      hourEl.textContent = operationTime[i] + ': ' + this.cookiesSoldArray[i] + ' cookies';
+      
+      var seattleCenterDataList = document.getElementById('center_totals');
+      seattleCenterDataList.appendChild(hourEl);
+
+      this.totalCookies = this.cookiesSoldArray[i] + this.totalCookies;
     }
+    var totalEl = document.createElement('li');
+    totalEl.textContent = 'Total: ' + this.totalCookies + ' cookies';
+    seattleCenterDataList.appendChild(totalEl);
   }
 }
 

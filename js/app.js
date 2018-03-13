@@ -116,6 +116,8 @@ var capitolHill = { // Capitol Hill Location
   minCust: 20,
   maxCust: 38,
   avgCookiesPerSale: 2.3,
+  totalCookies: 0,
+  cookiesSoldArray: [],
   custPerHr: function () {
     return Math.ceil(Math.random() * ((this.maxCust) - (this.minCust)) + this.minCust);
   },
@@ -123,14 +125,22 @@ var capitolHill = { // Capitol Hill Location
     return Math.round(this.avgCookiesPerSale * this.custPerHr());
   },
   showCookieData: function() {
-    var capitolHillDataList = document.getElementById('capitolhill_totals');
 
     for (var i = 0; i < operationTime.length; i++) {
-      var hourEl = document.createElement('li');
-          hourEl.textContent = operationTime[i] + ': ' + this.cookiesPerHr() + ' cookies';
+      
+      this.cookiesSoldArray[i] = this.cookiesPerHr();
 
-          capitolHillDataList.appendChild(hourEl);
+      var hourEl = document.createElement('li');
+      hourEl.textContent = operationTime[i] + ': ' + this.cookiesSoldArray[i] + ' cookies';
+      
+      var capitolHillDataList = document.getElementById('capitolhill_totals');
+      capitolHillDataList.appendChild(hourEl);
+
+      this.totalCookies = this.cookiesSoldArray[i] + this.totalCookies;
     }
+    var totalEl = document.createElement('li');
+    totalEl.textContent = 'Total: ' + this.totalCookies + ' cookies';
+    capitolHillDataList.appendChild(totalEl);
   }
 }
 
@@ -140,6 +150,8 @@ var alki = { // Alki location
   minCust: 2,
   maxCust: 16,
   avgCookiesPerSale: 4.6,
+  totalCookies: 0, 
+  cookiesSoldArray: [],
   custPerHr: function () {
     return Math.ceil(Math.random() * ((this.maxCust) - (this.minCust)) + this.minCust);
   },
@@ -147,14 +159,22 @@ var alki = { // Alki location
     return Math.round(this.avgCookiesPerSale * this.custPerHr());
   },
   showCookieData: function() {
-    var alkiDataList = document.getElementById('alki_totals');
     
     for (var i = 0; i < operationTime.length; i++) {
-      var hourEl = document.createElement('li');
-          hourEl.textContent = operationTime[i] + ': ' + this.cookiesPerHr() + ' cookies';
+      
+      this.cookiesSoldArray[i] = this.cookiesPerHr();
 
-          alkiDataList.appendChild(hourEl);
+      var hourEl = document.createElement('li');
+      hourEl.textContent = operationTime[i] + ': ' + this.cookiesSoldArray[i] + ' cookies';
+      
+      var alkiDataList = document.getElementById('alki_totals');
+      alkiDataList.appendChild(hourEl);
+
+      this.totalCookies = this.cookiesSoldArray[i] + this.totalCookies;
     }
+    var totalEl = document.createElement('li');
+    totalEl.textContent = 'Total: ' + this.totalCookies + ' cookies';
+    alkiDataList.appendChild(totalEl);
   }
 }
 

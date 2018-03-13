@@ -29,15 +29,15 @@ var firstAndPike = { // First and Pike Location
       
       this.cookiesSoldArray[i] = this.cookiesPerHr();
 
-      var hourEl = document.createElement('li');
-          hourEl.textContent = operationTime[i] + ': ' + this.cookiesSoldArray[i] + ' cookies';
-          pikeDataList.appendChild(hourEl);
+  var hourEl = document.createElement('li');
+      hourEl.textContent = operationTime[i] + ': ' + this.cookiesSoldArray[i] + ' cookies';
+      pikeDataList.appendChild(hourEl);
 
       this.totalCookies = this.cookiesSoldArray[i] + this.totalCookies;
     }
-    var totalEl = document.createElement('li'); // Creating a cookie total element
-        totalEl.textContent = 'Total: ' + this.totalCookies + ' cookies';
-        pikeDataList.appendChild(totalEl);
+  var totalEl = document.createElement('li'); // Creating a cookie total element
+      totalEl.textContent = 'Total: ' + this.totalCookies + ' cookies';
+      pikeDataList.appendChild(totalEl);
   }
 }
 

@@ -74,7 +74,7 @@ function makeHeaderRow() {
   cookiesTable.appendChild(trElement);
 }
 
-function totalChainCookiesPerHour() {
+function totalCookiesPerHour() {
   var trElement = document.createElement('tr');
   var tdElement = document.createElement('td');
   tdElement.textContent = 'Hourly Cookie Totals';
@@ -105,6 +105,6 @@ seaTac.render();
 seattleCenter.render();
 capitolHill.render();
 alki.render();
-totalChainCookiesPerHour();
+totalCookiesPerHour();
 
 

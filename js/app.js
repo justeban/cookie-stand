@@ -23,21 +23,22 @@ var firstAndPike = { // First and Pike Location
     return Math.round(this.avgCookiesPerSale * this.custPerHr());
   },
   showCookieData: function() {
-    var pikeDataList = document.getElementById('pike_totals');
 
     for (var i = 0; i < operationTime.length; i++){
       
       this.cookiesSoldArray[i] = this.cookiesPerHr();
 
-  var hourEl = document.createElement('li');
+      var hourEl = document.createElement('li');
       hourEl.textContent = operationTime[i] + ': ' + this.cookiesSoldArray[i] + ' cookies';
+      
+      var pikeDataList = document.getElementById('pike_totals');    
       pikeDataList.appendChild(hourEl);
 
       this.totalCookies = this.cookiesSoldArray[i] + this.totalCookies;
     }
-  var totalEl = document.createElement('li'); // Creating a cookie total element
-      totalEl.textContent = 'Total: ' + this.totalCookies + ' cookies';
-      pikeDataList.appendChild(totalEl);
+    var totalEl = document.createElement('li'); // Creating a cookie total element
+    totalEl.textContent = 'Total: ' + this.totalCookies + ' cookies';
+    pikeDataList.appendChild(totalEl);
   }
 }
 
@@ -47,6 +48,8 @@ var seaTac = { // SeaTac Location
   minCust: 3,
   maxCust: 24, 
   avgCookiesPerSale: 1.2,
+  totalCookies: 0,
+  cookiesSoldArray: [],
   custPerHr: function() {
     return Math.ceil(Math.random() * ((this.maxCust) - (this.minCust)) + this.minCust);
   },
@@ -54,14 +57,22 @@ var seaTac = { // SeaTac Location
     return Math.round(this.avgCookiesPerSale * this.custPerHr());
   },
   showCookieData: function() {
-    var seaTacDataList = document.getElementById('seatac_totals');
 
     for (var i = 0; i < operationTime.length; i++) {
+      
+      this.cookiesSoldArray[i] = this.cookiesPerHr();
+
       var hourEl = document.createElement('li');
-          hourEl.textContent = operationTime[i] + ': ' + this.cookiesPerHr() + ' cookies';
-          
-          seaTacDataList.appendChild(hourEl);
+      hourEl.textContent = operationTime[i] + ': ' + this.cookiesSoldArray[i] + ' cookies';
+      
+      var seaTacDataList = document.getElementById('seatac_totals');    
+      seaTacDataList.appendChild(hourEl);
+
+      this.totalCookies = this.cookiesSoldArray[i] + this.totalCookies;
     }
+    var totalEl = document.createElement('li');
+    totalEl.textContent = 'Total: ' + this.totalCookies + ' cookies';
+    seaTacDataList.appendChild(totalEl);
   }
 }
 

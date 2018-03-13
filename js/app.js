@@ -1,13 +1,5 @@
 'use strict';
 
-// object {
-//   max customer: 
-//   min customers
-//   avg cookies / customer
-//   customers per hour = rand num
-//   cookies purchased per hour = avg cookies purchased * rand number of customers generated
-// }
-
 var operationTime = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
 var firstAndPike = { // First and Pike Location
@@ -179,5 +171,7 @@ var alki = { // Alki location
 }
 
 alki.showCookieData();
+
+document.createElement()
 
 

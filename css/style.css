@@ -2,26 +2,29 @@
   margin: 0;
   box-sizing: border-box;
 }
-body {
-  background: skyblue;
-  font-size: 16px;
+h1, h2, h3, h4, p {
+  font-family: 'Oswald', sans-serif;
+  color: white;
 }
 h1 {
-  font-size: 2em;
+  font-size: 5em;
   font-weight: 900;
-  font-family: 'Oswald', sans-serif;
 }
 h2 {
-  font-family: 'Oswald', sans-serif;
-  font-size: 1.5em;
+  font-size: 2.5em;
   font-weight: 700;
 }
 h3 {
-  font-size: 1.125em;
+  font-size: 2.125em;
   font-weight: 500;
 }
+h4 {
+  font-size: 1.5em;
+  font-weight: 400;
+}
 p {
-  font-size: 0.75em
+  font-size: 1em;
+  font-weight: 400;
 }
 ul {
   padding-left: 3px;
@@ -31,64 +34,96 @@ li {
   margin-left: 18px;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
+div {
+  display: block;
+}
 header {
-  text-align:center;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../img/daria-nepriakhina-6035-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  /* background-attachment: fixed; */
+  overflow: hidden;
+  box-shadow: 0px -13px 35px 14px #666;
 }
 section {
-  display: block;
-  float:left;
   height:100vh;
+  width:100vw;
+  background: orchid;
+}
+#fp-logo-container {
+  position: absolute;
+  left: 0;
+  bottom: 0;
   width: 50vw;
-  position: relative;
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
-.right_side {
+#fp-logo {
+  width:200px;
+  vertical-align: middle;
+}
+#fp-text-container {
+  display:inline-block;
+  vertical-align: middle;
+}
+#fp-text-container h1 {
+  font-size: 5em;
+  border-bottom: solid 2px white;
+}
+#fp-text-container h2 {
+  font-size: 1.5em;
+}
+section {
   text-align: center;
-  background: salmon;
 }
-.right_side ul {
-  padding:0;
+#locations {
+  background: #9c7f5f;
 }
-.right_side li {
-  color: white;
-  margin: 0;
-  list-style-type: none;
+#about {
+  background: #513a28;
 }
-.right_side h2 {
-  margin-bottom: 5px;
-}
-.cookie_data {
-  width: 100vw;
+section h3 {
   text-align: center;
-}
-#Logo {
-  display: block;
-  width:300px;
-  height:auto;
+  padding: 50px 0 5px 0;
+  border-bottom: solid 1px white;
+  width: 15%;
   margin: 0 auto;
 }
-.logo_container {
-    width: 340px;
-    margin: 100px auto;
-    background: blue;
-    border-radius: 50%;
+section p {
+  margin: 20px 25%;
+  line-height: 1.5em;  
 }
-.logo_container h1 {
+.location-entry {
   text-align: center;
+  display: inline-block;
+  margin: 12px;
+}
+.location-entry img {
+  width: 200px;  
+  border: solid 10px #fbf9ee; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 3px;
+}
+.location-entry a {
+  font-size: 2em;
   color: white;
-  stroke: solid 1px black;
+  margin: 3px;
 }
-
-div { 
-  margin: 25px 25px;
-  padding: 10px;
+.location-entry a:hover {
+  color: #5a4646;
 }
-div.data-list {
-  float:left;
-  background:#1590c9;
+.location-entry h4 {
+  padding-top: 10px;
+  margin-bottom: 8px;
 }
-.data-list li {
-  font-family: Arial, Helvetica, sans-serif;
-  color: white;
-  border: solid 1px white;
+.location-entry p {
+  margin: 8px;
+  line-height: inherit;
+}
+.social-icons {
   padding: 5px;
 }

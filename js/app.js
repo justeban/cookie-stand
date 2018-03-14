@@ -106,5 +106,3 @@ seattleCenter.render();
 capitolHill.render();
 alki.render();
 totalCookiesPerHour();
-
-

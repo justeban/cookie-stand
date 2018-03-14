@@ -153,8 +153,8 @@ section p {
   padding: 5px;
 }
 #fp-logo {
-  transition: all ease-in-out 8s;
+  transition: all ease-in-out 1s;
 }
 #fp-logo:hover {
-  transform: rotate(1080deg), scale(2);
+  transform: scale(.1);
 }

@@ -100,9 +100,38 @@ var capitolHill = new CookieShop('Capitol Hill', 20, 38, 2.3);
 var alki = new CookieShop('Alki', 2, 16, 4.6);
 
 makeHeaderRow();
-firstAndPike.render();
-seaTac.render();
-seattleCenter.render();
-capitolHill.render();
-alki.render();
+function renderAllShops() {
+  for(var i in allShops) {
+    allShops[i].render();
+  }
+}
+renderAllShops();
+// firstAndPike.render();
+// seaTac.render();
+// seattleCenter.render();
+// capitolHill.render();
+// alki.render();
 totalCookiesPerHour();
+
+/*
+
+//event listener's callback funtion
+function addNewDog(event) {
+  event.preventDefault();
+  console.log(event.target.dogBreed.value);
+
+  var newName = event.target.dogName.value;
+  var newColor = event.target.dogColor.value;
+  var newBreed = event.target.dogBreed.value;
+  var newNickname = event.target.dogNickname;
+
+  new Dog(newName, newColor, newBreed, newNickname);
+
+  dogTable.innerHTML = '';
+  renderAllDogs();
+}
+
+//add event listener
+dogform.addEventListener('submit', )
+
+*/

@@ -26,8 +26,7 @@ CookieShop.prototype.cookiesPerHr = function () {
   return Math.round(this.cookiesPerSale * this.custPerHr());
 };
 
-CookieShop.prototype.render = function() {
-
+CookieShop.prototype.render = function() { // Render Function
   var trElement = document.createElement('tr');
   var thElement = document.createElement('th');
   thElement.textContent = this.location;
@@ -47,17 +46,16 @@ CookieShop.prototype.render = function() {
     this.cookiesSoldPerHr.push(cookiesSold);
 
     totalCookiesSold += cookiesSold;
-
   }
 
   tdElement = document.createElement('td');
   tdElement.textContent = totalCookiesSold;
   trElement.appendChild(tdElement);
-
   cookiesTable.appendChild(trElement);
 };
 
-function makeHeaderRow() {
+function makeHeaderRow() { // Header Row Function
+  var theadElement = document.createElement('thead');
   var trElement = document.createElement('tr');
   var thElement = document.createElement('th');
   thElement.textContent = '';
@@ -72,18 +70,18 @@ function makeHeaderRow() {
   thElement = document.createElement('th');
   thElement.textContent = 'Daily Location Totals';
   trElement.appendChild(thElement);
+  theadElement.appendChild(trElement);
 
-  cookiesTable.appendChild(trElement);
+  cookiesTable.appendChild(theadElement);
 }
-var grandTotalCookies;
 
-function totalCookiesPerHour() {
+function totalCookiesPerHour() { // Bottom Totals
   var trElement = document.createElement('tr');
   var thElement = document.createElement('th');
   thElement.textContent = 'Hourly Cookie Totals';
   trElement.appendChild(thElement);
 
-  grandTotalCookies = 0;
+  var grandTotalCookies = 0;
 
   for (var i = 0; i < operationTime.length; i++) {
     var totalCookies = 0;
@@ -95,9 +93,11 @@ function totalCookiesPerHour() {
     tdElement.textContent = totalCookies;
     trElement.appendChild(tdElement);
 
-    cookiesTable.appendChild(trElement);
   }
-  return grandTotalCookies;
+  tdElement = document.createElement('td');
+  tdElement.textContent = grandTotalCookies;
+  trElement.appendChild(tdElement);
+  cookiesTable.appendChild(trElement);
 }
 
 new CookieShop('First and Pike', 23, 65, 6.3);

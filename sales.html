@@ -10,10 +10,45 @@
   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 </head>
 <body>
+  <header id="staff-page">
+    <nav>
+      <div id="sales-logo-container">
+        <img id="sales-logo" title="Salmon River Cookies and Coffee" alt="Salmon River Logo" src="./img/Salmon_River_Cookies_logo.png"/>
+        <span id="sales-text-container">
+          <h1>Salmon River</h1>
+          <h2>Cookies and Coffee</h2>
+        </span>
+      </div>
+      <ul>
+        <li><a href="./index.html" title="Home Page">Home</a></li>
+        <li><a href="./sales.html" title="Sales Data">Sales</a></li>
+      </ul>
+    </nav>
+  </header>
   <section>
     <h1>Sales Data</h1>
     <em>Cookies per Hour</em>
     <table id="cookies-sold"></table>
+    
+    <form id="add-shop-form">
+      <fieldset>
+        <legend>Add a New Store</legend>
+
+        <label for="shopLocation">Shop Location: </label>
+        <input type="text" name="shopLocation">
+
+        <label for="minCust">Minimum Customers per Hour: </label>
+        <input type="number" name="minCust">
+
+        <label for="maxCust">Maximum Customers per Hour: </label>
+        <input type="number" name="maxCust">
+
+        <label for="cookiesPerSale">Cookies per Sale</label>
+        <input type="number" name="cookiesPerSale" step="0.1">
+
+        <button>Add a Store</button>
+      </fieldset>
+    </form>
   </section>
   <script src="js/app.js"></script>
 </body>

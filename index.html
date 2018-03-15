@@ -11,7 +11,15 @@
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 </head>
 <body>
-  <header>
+  <header id="home">
+    <nav id="home-nav">
+      <ul>
+        <li><a href="#home" title="Go Home"><i class="fas fa-bullseye"></i></a></li>
+        <li><a href="#about" title="Go to About"><i class="fas fa-bullseye"></i></a></li>
+        <li><a href="#locations" title="Go to Locations"><i class="fas fa-bullseye"></i></a></li>
+        <li><a href="#sales" title="Go See Sales"><i class="fas fa-bullseye"></i></a></li>
+      </ul>
+    </nav>
     <div id="fp-logo-container">
       <img id="fp-logo" title="Salmon River Cookies and Coffee" alt="Salmon River Logo" src="./img/Salmon_River_Cookies_logo.png" />
       <span id="fp-text-container">
@@ -21,85 +29,91 @@
     </div>
   </header>
   <section id="about"> 
-    <h3>About Us</h3>
-    <p>Pat has developed a recipe for a coffee-time confection called Salmon Cookies. They're cookies made into the shape of a salmon,
-    and actually made with salmon (though the fish is ground up so fine that you can't even taste it!) that is the ideal match
-    for a steaming cup of coffee on a gray Seattle morning. Or gray Seattle afternoon... whatever.</p>
-    <p>Tourists will go gaga for them, locals will begrudgingly fall in love with them, and Pat will make a ton of money.</p>
+    <div class="text-container">
+      <h3>About Us</h3>
+      <p>Pat has developed a recipe for a coffee-time confection called Salmon Cookies. They're cookies made into the shape of a salmon,
+      and actually made with salmon (though the fish is ground up so fine that you can't even taste it!) that is the ideal match
+      for a steaming cup of coffee on a gray Seattle morning. Or gray Seattle afternoon... whatever.</p>
+      <p>Tourists will go gaga for them, locals will begrudgingly fall in love with them, and Pat will make a ton of money.</p>
+    </div>
   </section>
   <section id="locations">
-    <h3>Locations</h3>
-    <div class="location-entry">
-      <h4>First and Pike</h4>
-      <img title="First and Pike" alt="photo of shop at first and pike" src="./img/first_and_pike.jpg">
-      <p>509.999.9999</p>
-      <p>123 E Pike</p>
-      <div class="social-icons">
-        <a href="#" title="Facebook"><i class="fab fa-facebook-f" data-fa-transform="shrink-3.5 down-1.6 right-1.25" data-fa-mask="fas fa-circle"></i></a>
-        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
-      </div>  
-    </div>
-    <div class="location-entry">
-      <h4>SeaTac Airport</h4>
-      <img src="./img/seatac.jpg">
-      <p>509.999.9999</p>
-      <p>SeaTac Airport</p>
-      <div class="social-icons">
-        <a href="#" title="Facebook">
-          <i class="fab fa-facebook-f" data-fa-transform="shrink-3.5 down-1.6 right-1.25" data-fa-mask="fas fa-circle"></i></a>
-        <a href="#" title="Instagram">
-          <i class="fab fa-instagram"></i></a>
-        <a href="#" title="Twitter">
-          <i class="fab fa-twitter"></i></a>
+    <div class="text-container">
+      <h3>Locations</h3>
+      <div class="location-entry">
+        <h4>First and Pike</h4>
+        <img title="First and Pike" alt="photo of shop at first and pike" src="./img/first_and_pike.jpg">
+        <p>509.999.9999</p>
+        <p>123 E Pike</p>
+        <div class="social-icons">
+          <a href="#" title="Facebook"><i class="fab fa-facebook-f" data-fa-transform="shrink-3.5 down-1.6 right-1.25" data-fa-mask="fas fa-circle"></i></a>
+          <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>  
       </div>
-    </div>
-    <div class="location-entry">
-      <h4>SeaTac Airport</h4>
-      <img src="./img/seattle-center-armory.jpg">
-      <p>509.999.9999</p>
-      <p>305 Harrison St</p>
-      <div class="social-icons">
-        <a href="#" title="Facebook">
-          <i class="fab fa-facebook-f" data-fa-transform="shrink-3.5 down-1.6 right-1.25" data-fa-mask="fas fa-circle"></i></a>
-        <a href="#" title="Instagram">
-          <i class="fab fa-instagram"></i></a>
-        <a href="#" title="Twitter">
-          <i class="fab fa-twitter"></i></a>
+      <div class="location-entry">
+        <h4>SeaTac Airport</h4>
+        <img src="./img/seatac.jpg">
+        <p>509.999.9999</p>
+        <p>SeaTac Airport</p>
+        <div class="social-icons">
+          <a href="#" title="Facebook">
+            <i class="fab fa-facebook-f" data-fa-transform="shrink-3.5 down-1.6 right-1.25" data-fa-mask="fas fa-circle"></i></a>
+          <a href="#" title="Instagram">
+            <i class="fab fa-instagram"></i></a>
+          <a href="#" title="Twitter">
+            <i class="fab fa-twitter"></i></a>
+        </div>
       </div>
-    </div>
-    <div class="location-entry">
-      <h4>Capitol Hill</h4>
-      <img src="./img/capitol-hill.jpg">
-      <p>509.999.9999</p>
-      <p>1600 E Olive Way</p>
-      <div class="social-icons">
-        <a href="#" title="Facebook">
-          <i class="fab fa-facebook-f" data-fa-transform="shrink-3.5 down-1.6 right-1.25" data-fa-mask="fas fa-circle"></i></a>
-        <a href="#" title="Instagram">
-          <i class="fab fa-instagram"></i></a>
-        <a href="#" title="Twitter">
-          <i class="fab fa-twitter"></i></a>
+      <div class="location-entry">
+        <h4>Seattle Center</h4>
+        <img src="./img/seattle-center-armory.jpg">
+        <p>509.999.9999</p>
+        <p>305 Harrison St</p>
+        <div class="social-icons">
+          <a href="#" title="Facebook">
+            <i class="fab fa-facebook-f" data-fa-transform="shrink-3.5 down-1.6 right-1.25" data-fa-mask="fas fa-circle"></i></a>
+          <a href="#" title="Instagram">
+            <i class="fab fa-instagram"></i></a>
+          <a href="#" title="Twitter">
+            <i class="fab fa-twitter"></i></a>
+        </div>
       </div>
-    </div>
-    <div class="location-entry">
-      <h4>Alki</h4>
-      <img src="./img/capitol-hill.jpg">
-      <p>509.999.9999</p>
-      <p>1702 Alki Ave SW</p>
-      <div class="social-icons">
-        <a href="#" title="Facebook">
-          <i class="fab fa-facebook-f" data-fa-transform="shrink-3.5 down-1.6 right-1.25" data-fa-mask="fas fa-circle"></i></a>
-        <a href="#" title="Instagram">
-          <i class="fab fa-instagram"></i></a>
-        <a href="#" title="Twitter">
-          <i class="fab fa-twitter"></i></a>
+      <div class="location-entry">
+        <h4>Capitol Hill</h4>
+        <img src="./img/capitol-hill.jpg">
+        <p>509.999.9999</p>
+        <p>1600 E Olive Way</p>
+        <div class="social-icons">
+          <a href="#" title="Facebook">
+            <i class="fab fa-facebook-f" data-fa-transform="shrink-3.5 down-1.6 right-1.25" data-fa-mask="fas fa-circle"></i></a>
+          <a href="#" title="Instagram">
+            <i class="fab fa-instagram"></i></a>
+          <a href="#" title="Twitter">
+            <i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="location-entry">
+        <h4>Alki</h4>
+        <img src="./img/alki.jpg">
+        <p>509.999.9999</p>
+        <p>1702 Alki Ave SW</p>
+        <div class="social-icons">
+          <a href="#" title="Facebook">
+            <i class="fab fa-facebook-f" data-fa-transform="shrink-3.5 down-1.6 right-1.25" data-fa-mask="fas fa-circle"></i></a>
+          <a href="#" title="Instagram">
+            <i class="fab fa-instagram"></i></a>
+          <a href="#" title="Twitter">
+            <i class="fab fa-twitter"></i></a>
+        </div>
       </div>
     </div>
   </section>
   <section id="sales">
-    <h3>Sales Data</h3>
-    <p><a href="sales.html" title="Sales Data">Click Here</a> to see Sale Data</p>
+    <div class="text-container">
+      <h3>Sales Data</h3>
+      <a href="sales.html" title="Sales Data"><i class="far fa-chart-bar fa-10x"></i></a>
+      <a href="sales.html" title="Sales Data"><em>click here to see sales report</em></a>
   </section>
 </body>
 </html>

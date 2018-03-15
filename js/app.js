@@ -75,6 +75,7 @@ function makeHeaderRow() {
 
   cookiesTable.appendChild(trElement);
 }
+var grandTotalCookies;
 
 function totalCookiesPerHour() {
   var trElement = document.createElement('tr');
@@ -82,10 +83,13 @@ function totalCookiesPerHour() {
   thElement.textContent = 'Hourly Cookie Totals';
   trElement.appendChild(thElement);
 
+  grandTotalCookies = 0;
+
   for (var i = 0; i < operationTime.length; i++) {
     var totalCookies = 0;
     for( var j = 0; j < allShops.length; j++) {
       totalCookies += allShops[j].cookiesSoldPerHr[i];
+      grandTotalCookies += allShops[j].cookiesSoldPerHr[i];
     }
     var tdElement = document.createElement('td');
     tdElement.textContent = totalCookies;
@@ -93,6 +97,7 @@ function totalCookiesPerHour() {
 
     cookiesTable.appendChild(trElement);
   }
+  return grandTotalCookies;
 }
 
 new CookieShop('First and Pike', 23, 65, 6.3);
@@ -109,7 +114,10 @@ function renderAllShops() {
 // event listener's callback funtion
 function addNewShop(event) {
   event.preventDefault();
-
+  console.log(event);
+  console.log(event.target);
+  console.log(event.target.shopLocation);
+  console.log(event.target.shopLocation.value);
   var newLoc = event.target.shopLocation.value;
   var newMinCust = parseInt(event.target.minCust.value);
   var newMaxCust = parseInt(event.target.maxCust.value);

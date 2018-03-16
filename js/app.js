@@ -68,7 +68,7 @@ function makeHeaderRow() { // Header Row Function
   }
 
   thElement = document.createElement('th');
-  thElement.textContent = 'Daily Location Totals';
+  thElement.textContent = 'Daily Totals';
   trElement.appendChild(thElement);
   theadElement.appendChild(trElement);
 
@@ -78,7 +78,7 @@ function makeHeaderRow() { // Header Row Function
 function totalCookiesPerHour() { // Bottom Totals
   var trElement = document.createElement('tr');
   var thElement = document.createElement('th');
-  thElement.textContent = 'Hourly Cookie Totals';
+  thElement.textContent = 'Hourly Totals';
   trElement.appendChild(thElement);
 
   var grandTotalCookies = 0;

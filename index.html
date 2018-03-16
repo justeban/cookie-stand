@@ -9,10 +9,11 @@
   <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <!-- <script src="./js/scroll.js"></script> -->
 </head>
 <body>
-  <header id="home">
-    <nav id="home-nav">
+  <header id="home" class="home">
+    <nav class="fixed-side">
       <ul>
         <li><a href="#home" title="Go Home"><i class="fas fa-bullseye"></i></a></li>
         <li><a href="#about" title="Go to About"><i class="fas fa-bullseye"></i></a></li>
@@ -20,15 +21,15 @@
         <li><a href="#sales" title="Go See Sales"><i class="fas fa-bullseye"></i></a></li>
       </ul>
     </nav>
-    <div id="fp-logo-container">
-      <img id="fp-logo" title="Salmon River Cookies and Coffee" alt="Salmon River Logo" src="./img/Salmon_River_Cookies_logo.png" />
-      <span id="fp-text-container">
+    <div class="fp-logo-container">
+      <img class="fp-logo" title="Salmon River Cookies and Coffee" alt="Salmon River Logo" src="./img/Salmon_River_Cookies_logo.png" />
+      <div class="fp-text-container">
         <h1>Salmon River</h1>
         <h2>Cookies and Coffee</h2>
-      </span>
+      </div>
     </div>
   </header>
-  <section id="about"> 
+  <section id="about" class="full-width"> 
     <div class="text-container">
       <h3>About Us</h3>
       <p>Pat has developed a recipe for a coffee-time confection called Salmon Cookies. They're cookies made into the shape of a salmon,
@@ -37,7 +38,7 @@
       <p>Tourists will go gaga for them, locals will begrudgingly fall in love with them, and Pat will make a ton of money.</p>
     </div>
   </section>
-  <section id="locations">
+  <section id="locations" class="full-width">
     <div class="text-container">
       <h3>Locations</h3>
       <div class="location-entry">
@@ -109,7 +110,7 @@
       </div>
     </div>
   </section>
-  <section id="sales">
+  <section id="sales" class="full-width">
     <div class="text-container">
       <h3>Sales Data</h3>
       <a href="sales.html" title="Sales Data"><i class="far fa-chart-bar fa-10x"></i></a>

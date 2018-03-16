@@ -10,26 +10,25 @@
   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 </head>
 <body>
-  <header id="staff-page">
-    <nav>
-      <div id="sales-logo-container">
-        <img id="sales-logo" title="Salmon River Cookies and Coffee" alt="Salmon River Logo" src="./img/Salmon_River_Cookies_logo.png"/>
-        <span id="sales-text-container">
-          <h1>Salmon River</h1>
-          <h2>Cookies and Coffee</h2>
-        </span>
+  <header class="top-head">
+    <div class="top-logo-container">
+      <a href="./index.html"><img title="Salmon River Cookies and Coffee" alt="Salmon River Logo" src="./img/Salmon_River_Cookies_logo.png"/></a>
+      <div class="top-text-container">
+        <h1>Salmon River</h1>
+        <h2>Cookies and Coffee</h2>
       </div>
+    <nav class="top">
       <ul>
         <li><a href="./index.html" title="Home Page">Home</a></li>
         <li><a href="./sales.html" title="Sales Data">Sales</a></li>
       </ul>
     </nav>
+    </div>
   </header>
-  <section>
-    <h1>Sales Data</h1>
-    <em>Cookies per Hour</em>
+  <section id="sales-graph" class="full-width sticky-nav">
+    <h3>Cookies Sold</h3>
     <table id="cookies-sold"></table>
-    
+    <div class="form">
     <form id="add-shop-form">
       <fieldset>
         <legend>Add a New Store</legend>
@@ -49,6 +48,7 @@
         <button>Add a Store</button>
       </fieldset>
     </form>
+    </div>
   </section>
   <script src="js/app.js"></script>
 </body>

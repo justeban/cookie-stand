@@ -1,10 +1,10 @@
 * {
-  margin: 0;
   box-sizing: border-box;
+  margin: 0;
 }
 h1, h2, h3, h4, p {
-  font-family: 'Oswald', sans-serif;
   color: white;
+  font-family: 'Oswald', sans-serif;
 }
 h1 {
   font-size: 5em;
@@ -28,37 +28,28 @@ p {
 }
 em {
   text-decoration: none;
-  font-style: italic;
   font-size: 1em;
-
-}
-ul {
-  padding-left: 3px;
-}
-li {
-  list-style-type: disc;
-  margin-left: 18px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
 }
 div {
   display: block;
 }
-header {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  background-image: url(../img/daria-nepriakhina-6035-unsplash.jpg);
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
+header.home {
   background-attachment: fixed;
-  overflow: hidden;
+  background-image: url(../img/daria-nepriakhina-6035-unsplash.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
   box-shadow: 0px -13px 35px 14px #666;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+  
 }
-#header
-header::before {
+header.home::before {
+  background: #ffa07a;
   content: '';
-  width:100vw;
   height: 100vh;
   position: absolute;
   top: 0;
@@ -66,91 +57,115 @@ header::before {
   right: 0;
   left: 0;
   opacity:.4;
-  background: #ffa07a;
+  width:100vw;
+  
 }
-section {
+header.top-head {
+  background: #9c7f5f;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  z-index: 5;
+}
+section.full-width {
   position: relative;
   height:100vh;
   width:100vw;
   background: orchid;
   text-align:center;
   box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.2);
-  
 }
-/* nav {
-  position: absolute;
-  top:0;
-  right:0;
-  width: 150px;
-  margin: 22px;
-}
-nav ul li {
-  display: inline;
-} */
-#home-nav {
+nav.fixed-side {
   position: fixed;
   top: 40vh;
   right: 0;
   z-index:10;
   margin-right: 15px;
 }
-#home-nav li {
+nav.fixed-side li {
   list-style-type: none;
   margin: 20px;
 }
-#home-nav a {
+nav.fixed-side a {
   color: white;  
 }
-#home-nav a:active {
+nav.fixed-side a:active {
   color: gray;
 }
-table {
-  margin:40px auto;
+nav.top {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 1em;
+  position: relative;
+  font-family: oswald;
+  font-size: 1.25em;
 }
-table th {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.125em;
-  font-weight: 600;
-  padding: 3px;
-  margin: 3px;
+nav.top a {
+  color: white;
+  text-decoration: none;
+  padding-left:5px;
 }
-#fp-logo-container, #sales-logo-container {
+nav.top li {
+  display: inline;
+  position: relative;
+  transition: all ease .3s;
+}
+nav.top li:hover {
+  background:#352515;
+}
+nav.top li::before {
+  content: "";
+  position: absolute;
+  top:4px;
+  left:0;
+  bottom:0;
+  border-left: solid 1px white;
+  height: 80%;
+}
+
+div.fp-logo-container {
   position: absolute;
   left: 0;
   width: 50vw;
   margin-left: 20px;
   margin-bottom: 20px;
 }
-#fp-logo-container {
+div.fp-logo-container {
   bottom:0;  
 }
-#sales-logo-container {
-  top: 0;
-}
-#fp-logo {
+img.fp-logo {
   width:200px;
   vertical-align: middle;
+  transition: all ease-in-out 3s;
 }
-#sales-logo {
+img.fp-logo:hover {
+  transform: rotate(1080deg);
+}
+div.top-logo-container {
+  display: inline-block;
+  padding: .75em;
+}
+div.top-logo-container img {
   width:60px;
   vertical-align: middle;
 }
-#fp-text-container, #sales-text-container {
+div.fp-text-container, div.top-text-container {
   display:inline-block;
   vertical-align: middle;
 }
-#fp-text-container h1 {
+div.fp-text-container h1 {
   font-size: 5em;
   border-bottom: solid 2px white;
 }
-#sales-text-container h1{
+div.fp-text-container h2 {
+  font-size: 1.5em;
+}
+div.top-text-container h1{
   font-size: 2em;
   border-bottom: solid 2px white;
 }
-#fp-text-container h2 {
-  font-size: 1.5em;
-}
-#sales-text-container h2 {
+div.top-text-container h2 {
   font-size: .75em;
 }
 #locations {
@@ -162,54 +177,48 @@ table th {
 #sales {
   background: #d2bc97;
 }
-section h3 {
+section.full-width h3 {
   text-align: center;
   padding: 5px;
   border-bottom: solid 1px white;
   width: 15%;
   margin: 0 auto;
 }
-section p {
+section.full-width p {
   margin: 20px 25%;
   line-height: 1.5em;  
 }
-.location-entry {
+div.location-entry {
   text-align: center;
   display: inline-block;
   margin: 12px;
 }
-.location-entry img {
+div.location-entry img {
   width: 200px;  
   border: solid 10px #fbf9ee; 
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 3px;
 }
-.location-entry a {
+div.location-entry a {
   font-size: 2em;
   color: white;
   margin: 3px;
 }
-.location-entry a:hover {
+div.location-entry a:hover {
   color: #5a4646;
 }
-.location-entry h4 {
+div.location-entry h4 {
   padding-top: 10px;
   margin-bottom: 8px;
 }
-.location-entry p {
+div.location-entry p {
   margin: 8px;
   line-height: inherit;
 }
-.social-icons {
+div.social-icons {
   padding: 5px;
 }
-#fp-logo {
-  transition: all ease-in-out 3s;
-}
-#fp-logo:hover {
-  transform: rotate(1080deg);
-}
-.text-container {
+div.text-container {
   position: absolute;
   top: 50%;
   left: 0;
@@ -217,7 +226,32 @@ section p {
   transform: translateY(-50%);
 }
 #sales a {
-  margin:20px;
   color: gray;
-  display: block;
+  display:block;
+  margin:10px;
+}
+section.sticky-nav {
+  padding-top:120px;
+}
+table {
+  margin:20px auto;
+  color: white;
+}
+table th {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .9em;
+  font-weight: 600;
+  padding: 10px;
+}
+table td {
+  padding:15px;
+}
+table tr:nth-child(even) {
+  background: #352515; 
+}
+#sales-graph {
+  background: #513a28;
+}
+.active {
+  color:gray;
 }
